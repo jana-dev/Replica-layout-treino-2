@@ -151,6 +151,7 @@ body {
     font-size: 3em;
     width: 60%;
     padding-left:80px;
+    min-width: 360px;
 }
 .content-left {
     display: flex;
@@ -327,19 +328,71 @@ body {
 .carrossel {
     width: 100vw;
     height: 450px;
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+    flex-wrap: wrap;
 }
 .bloco-carrossel {
     width: 360px;
     height: 450px;
-    border: 1px solid red;
-    background: url(./img/shutterstock_581412451.png) no-repeat;
-    background-size: cover;
+    position: relative;
+
+}
+.bloco-carrossel h2{
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    color: #fff;
+    font-size: 1.5em;
+}
+.img-carrossel {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: .2s ease;
+    backface-visibility: hidden;
+    
+}
+.text-carrossel {
+    transition: .2s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+   
+    
 }
 
+.bloco-carrossel:hover .img-carrossel {
+    opacity: 0.3;
+    
+}
+.bloco-carrossel:hover .text-carrossel {
+    opacity: 1;
+    color: rgba(29,75,134,1);
+    
+}
+.bloco-carrossel:hover .text-carrossel h3 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+}
+.bloco-carrossel:hover .text-carrossel p {
+    margin-bottom: 40px;
+    font-size: 0.9em;
+}
+.bloco-carrossel:hover .text-carrossel a {
+    text-decoration: none;
+    color: rgba(29,75,134,1);
+    font-size: 1.2em;
+}
+.bloco-carrossel:hover .text-carrossel .fa-arrow-right {
+    margin-left: 20px;
+}
 /* Porque nos escolher */
 
 
